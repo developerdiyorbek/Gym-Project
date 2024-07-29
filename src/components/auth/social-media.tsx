@@ -29,7 +29,6 @@ const Social = () => {
 
   const onGithub = () => {
     setIsLoading(true);
-    console.log("salom");
     const githubProvider = new GithubAuthProvider();
     signInWithPopup(auth, githubProvider)
       .then(() => {

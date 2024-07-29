@@ -10,7 +10,7 @@ import {
 } from "../ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { LogOut } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "@/firebase";
 import { CgGym } from "react-icons/cg";
 
@@ -65,9 +65,11 @@ const UserBox = () => {
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem className="cursor-pointer">
-            <CgGym className="w-5 h-5 mr-2" />
-            <span>Gym</span>
+          <DropdownMenuItem className="cursor-pointer mb-3">
+            <Link to={"/dashboard"} className="w-full h-full flex items-center">
+              <CgGym className="w-5 h-5 mr-2" />
+              <span>Gym</span>
+            </Link>
           </DropdownMenuItem>
           <DropdownMenuItem
             className="cursor-pointer bg-destructive text-white"

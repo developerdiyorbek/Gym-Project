@@ -1,4 +1,3 @@
-import { NavLinks } from "@/constants";
 import { ModeToggle } from "./mode-toggle";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
@@ -16,15 +15,6 @@ const Navbar = () => {
           <img src={workoutIcon} alt="logo" className="w-[40px] md:w-[55px]" />
         </Link>
         <div className="flex items-center gap-3">
-          {NavLinks.map((nav) => (
-            <a
-              href={nav.path}
-              key={nav.path}
-              className="font-medium hover:underline duration-100 hidden md:block"
-            >
-              {nav.label}
-            </a>
-          ))}
           <ModeToggle />
           {user ? (
             <UserBox />
